@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
 	return (
-		<FlexWrapper className="mb-8 h-full w-full flex-col items-center justify-center">
+		<FlexWrapper className="mb-12 h-full w-full flex-col items-center justify-center">
 			<h1 className="text-center text-4xl font-bold">
 				Simple ChatGPT API integration using <br />
 				Next.js and TailwindCSS.
