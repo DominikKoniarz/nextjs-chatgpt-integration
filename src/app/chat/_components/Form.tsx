@@ -1,19 +1,31 @@
-"use client";
-
-import { useState } from "react";
 import FormPrompt from "./FormPrompt";
 import SubmitButton from "./SubmitButton";
 
-export default function Form() {
-	const [prompValue, setPrompValue] = useState<string>("");
+type FormProps = {
+	input: string;
+	handleInputChange: (
+		e:
+			| React.ChangeEvent<HTMLInputElement>
+			| React.ChangeEvent<HTMLTextAreaElement>,
+	) => void;
+	onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+};
 
+export default function Form({
+	input,
+	handleInputChange,
+	onSubmit,
+}: FormProps) {
 	return (
-		<form className="mx-auto mb-0 mt-4 flex w-full max-w-2xl shrink-0 flex-row items-end gap-2 self-end sm:mb-4">
+		<form
+			className="mx-auto mb-0 mt-4 flex w-full max-w-2xl shrink-0 flex-row items-end gap-2 self-end sm:mb-4"
+			onSubmit={onSubmit}
+		>
 			<FormPrompt
-				promptValue={prompValue}
-				setPromptValue={(value) => setPrompValue(value)}
+				input={input}
+				handleInputChange={(e) => handleInputChange(e)}
 			/>
-			<SubmitButton disabled={!prompValue.length} />
+			<SubmitButton disabled={!input.length} />
 		</form>
 	);
 }
