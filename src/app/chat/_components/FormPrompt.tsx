@@ -15,7 +15,7 @@ export default function FormPrompt({
 			ref={textareaRef}
 			value={promptValue}
 			onChange={(e) => setPromptValue(e.target.value)}
-			className="h-min min-h-min w-full resize-none overflow-hidden border-none bg-white/20 text-black transition-colors focus:bg-white/35 focus:ring-offset-0 focus-visible:bg-white/30 focus-visible:ring-offset-0"
+			className="h-min min-h-min w-full resize-none overflow-hidden border-none bg-white/20 text-white transition-colors placeholder:text-white focus:bg-white/25 focus:ring-white focus:ring-offset-0 focus-visible:bg-white/25 focus-visible:ring-white focus-visible:ring-offset-0"
 			placeholder="Type a message..."
 			rows={1}
 			style={{ height: "auto" }}
