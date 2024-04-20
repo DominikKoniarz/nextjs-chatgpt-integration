@@ -1,11 +1,19 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Nav() {
 	return (
 		<nav className="flex h-10 w-full shrink-0 flex-row items-center justify-start">
-			<Button variant="link" size="sm" className="text-white">
+			<Link
+				href="/"
+				className={buttonVariants({
+					size: "sm",
+					variant: "link",
+					className: "text-white",
+				})}
+			>
 				back to home
-			</Button>
+			</Link>
 		</nav>
 	);
 }
