@@ -1,7 +1,9 @@
+import Form from "./_components/Form";
+
 export default function page() {
 	return (
-		<main className="from-gradient-from via-gradient-via to-gradient-to flex h-full w-full flex-col bg-gradient-to-tr via-[52%] text-white">
-			Chat page
+		<main className="flex h-full w-full flex-col items-center justify-end bg-gradient-to-tr from-gradient-from via-gradient-via via-[52%] to-gradient-to p-4 text-white">
+			<Form />
 		</main>
 	);
 }
