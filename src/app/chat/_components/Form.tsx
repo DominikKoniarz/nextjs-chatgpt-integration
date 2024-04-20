@@ -8,7 +8,7 @@ export default function Form() {
 	const [prompValue, setPrompValue] = useState<string>("");
 
 	return (
-		<form className="mb-0 flex w-full flex-row items-end gap-2 sm:mb-10 sm:w-72">
+		<form className="mx-auto mb-0 mt-4 flex w-full max-w-2xl shrink-0 flex-row items-end gap-2 self-end sm:mb-4">
 			<FormPrompt
 				promptValue={prompValue}
 				setPromptValue={(value) => setPrompValue(value)}

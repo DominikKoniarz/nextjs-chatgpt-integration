@@ -8,3 +8,22 @@
 		@apply h-full;
 	}
 }
+
+#messages-list::-webkit-scrollbar {
+	@apply w-2;
+}
+
+/* Track */
+#messages-list::-webkit-scrollbar-track {
+	@apply rounded-lg bg-white/20;
+}
+
+/* Handle */
+#messages-list::-webkit-scrollbar-thumb {
+	@apply rounded-lg bg-white/40;
+}
+
+/* Handle on hover */
+#messages-list::-webkit-scrollbar-thumb:hover {
+	@apply bg-white/60;
+}
